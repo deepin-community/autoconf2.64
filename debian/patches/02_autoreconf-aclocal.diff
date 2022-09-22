@@ -1,0 +1,12 @@
+--- a/bin/autoreconf.in
++++ b/bin/autoreconf.in
+@@ -37,6 +37,9 @@
+   # e.g.: COMMAND.COM.  For DJGPP always use the shell that configure
+   # has detected.
+   $ENV{'SHELL'} = '@SHELL@' if ($^O eq 'dos');
++
++  # Make aclocal call the right autom4te version.
++  $ENV{AUTOM4TE} = '/usr/bin/autom4te2.64';
+ }
+ 
+ use Autom4te::ChannelDefs;

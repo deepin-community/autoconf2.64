@@ -1,0 +1,3 @@
+02_autoreconf-aclocal.diff
+03_no_autoconf.info.diff
+Add-sunway-support.patch

@@ -1,0 +1,29 @@
+Description: Add sunway support
+Author: Miao Changwei <miaochangwei@uniontech.com>
+
+---
+Last-Update: 2022-04-27
+
+--- autoconf2.64-2.64+dfsg.orig/build-aux/config.guess
++++ autoconf2.64-2.64+dfsg/build-aux/config.guess
+@@ -957,6 +957,9 @@ EOF
+     sparc:Linux:*:* | sparc64:Linux:*:*)
+ 	echo ${UNAME_MACHINE}-unknown-linux-gnu
+ 	exit ;;
++    sw_64:Linux:*:*)
++	echo ${UNAME_MACHINE}-unknown-linux-gnu
++	exit ;;
+     vax:Linux:*:*)
+ 	echo ${UNAME_MACHINE}-dec-linux-gnu
+ 	exit ;;
+--- autoconf2.64-2.64+dfsg.orig/build-aux/config.sub
++++ autoconf2.64-2.64+dfsg/build-aux/config.sub
+@@ -289,7 +289,7 @@ case $basic_machine in
+ 	| sh64 | sh64le \
+ 	| sparc | sparc64 | sparc64b | sparc64v | sparc86x | sparclet | sparclite \
+ 	| sparcv8 | sparcv9 | sparcv9b | sparcv9v \
+-	| spu | strongarm \
++	| spu | strongarm | sw_64 \
+ 	| tahoe | thumb | tic4x | tic80 | tron \
+ 	| v850 | v850e \
+ 	| we32k \

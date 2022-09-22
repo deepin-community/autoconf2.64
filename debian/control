@@ -1,0 +1,18 @@
+Source: autoconf2.64
+Section: devel
+Priority: extra
+Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Uploaders: Matthias Klose <doko@debian.org>
+Standards-Version: 3.9.8
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: texinfo, m4
+
+Package: autoconf2.64
+Architecture: all
+Multi-Arch: foreign
+Depends: m4, debianutils (>= 1.8), autoconf (>= 2.50), perl, libfile-temp-perl, ${misc:Depends}
+Replaces: autoconf (<< 2.50)
+Conflicts: autoconf (<< 2.50)
+Description: automatic configure script builder (obsolete version)
+ This obsolete version is required to build GCC (>= 4.3.3), newlib,
+ and probably some others toolchain related packages.
